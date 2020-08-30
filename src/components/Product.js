@@ -1,6 +1,10 @@
 import React from 'react'
 
 class Product extends React.Component{
+    constructor(){
+        super()
+        this.state={}
+    }
     render(){
         return(
             <div className='product'>
