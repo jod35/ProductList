@@ -4,9 +4,14 @@ import products from '../data'
 
 
 class ProductList extends React.Component{
-   
+    constructor(){
+        super()
+        this.state={
+            product_data:products
+        }
+    }
     render(){
-        let product_items=products.map((product)=>(
+        let product_items=this.state.product_data.map((product)=>(
             <Product
                  key={'product -' + product.id} 
                  name={product.name}
@@ -16,8 +21,8 @@ class ProductList extends React.Component{
             />
         ))
         return(
-            <div className='products'>
-                <h2>Products</h2>
+            <div className='products'>  
+                
                 {product_items}
             </div>
         )
